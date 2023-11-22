@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CarritoCompras</string>
+
+    //toolbar
+
+    //Texto Splash
+    <string name="Compañia">LircayHUB</string>
+    <string name="Nombre">Diego Valderrama</string>
+    <string name="Correo">dvalderrama20@alumnos.utalca.cl</string>
+
+</resources>
