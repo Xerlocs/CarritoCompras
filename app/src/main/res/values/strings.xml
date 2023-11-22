@@ -2,6 +2,8 @@
     <string name="app_name">CarritoCompras</string>
 
     //toolbar
+    <string name="titulo_order">Ordenar por</string>
+    <string name="titulo_add">Añadir producto</string>
 
     //Texto Splash
     <string name="Compañia">LircayHUB</string>
