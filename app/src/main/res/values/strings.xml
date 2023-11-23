@@ -6,8 +6,17 @@
     <string name="titulo_add">Añadir producto</string>
 
     //Texto Splash
-    <string name="Compañia">LircayHUB</string>
-    <string name="Nombre">Diego Valderrama</string>
-    <string name="Correo">dvalderrama20@alumnos.utalca.cl</string>
+    <string name="Compañia" translatable="false">LircayHUB</string>
+    <string name="Nombre" translatable="false">Diego Valderrama</string>
+    <string name="Correo" translatable="false">dvalderrama20@alumnos.utalca.cl</string>
+
+    //Texto Ejemplo
+    <string name="N_ejemplo">Nombre</string>
+    <string name="C_ejemplo">Cantidad</string>
+    <string name="P_ejemplo">Precio</string>
+
+    //a
+    <string name="hola" translatable="false">hola</string>
+    <string name="cambio" translatable="false">cambio</string>
 
 </resources>

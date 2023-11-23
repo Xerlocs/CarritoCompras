@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Carrito de compras</string>
+    <string name="titulo_order">Ordenar por</string>
+    <string name="titulo_add">Añadir producto</string>
+    <string name="N_ejemplo">Nombre</string>
+    <string name="C_ejemplo">Cantidad</string>
+    <string name="P_ejemplo">Precio</string>
+</resources>

@@ -30,4 +30,14 @@
         app:layout_constraintVertical_bias="0.396"
         app:srcCompat="@drawable/_59270" />
 
+    <TextView
+        android:id="@+id/aaa"
+        android:layout_width="245dp"
+        android:layout_height="156dp"
+        android:text="@string/hola"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

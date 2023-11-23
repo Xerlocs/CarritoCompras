@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shopping Car</string>
+    <string name="titulo_order">Order by</string>
+    <string name="titulo_add">Add product</string>
+    <string name="N_ejemplo">Name</string>
+    <string name="C_ejemplo">Quantity</string>
+    <string name="P_ejemplo">Price</string>
+</resources>

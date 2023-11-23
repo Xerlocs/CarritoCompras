@@ -12,6 +12,12 @@
         android:theme="@style/Theme.CarritoCompras"
         tools:targetApi="31">
         <activity
+            android:name=".CrearActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrdenActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
