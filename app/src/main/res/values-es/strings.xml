@@ -6,6 +6,7 @@
     <string name="N_ejemplo">Nombre</string>
     <string name="C_ejemplo">Cantidad</string>
     <string name="P_ejemplo">Precio</string>
+    <string name="buscar">Buscar</string>
     <string name="Por_Cantida">Cantidad de producto</string>
     <string name="Por_Tipo">Tipo de producto</string>
 </resources>

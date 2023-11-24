@@ -10,7 +10,6 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 
 private lateinit var cambio: TextView
-private lateinit var menu_orden: ConstraintLayout
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,9 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        menu_orden = findViewById(R.id.Menu_ordenar)
-
-        cambio = findViewById(R.id.aaa)
+        cambio = findViewById(R.id.orden)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -31,8 +28,13 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.action_order -> {
-                cambio.setText(R.string.cambio)
-                menu_orden.visibility = View.VISIBLE
+                if(cambio.text == "A - Z"){
+                    cambio.setText(R.string.Por_Cantida)
+                }else if(cambio.text == "Cantidad de producto"){
+                    cambio.setText(R.string.Por_Tipo)
+                }else{
+                    cambio.setText(R.string.A_Z)
+                }
                 return true
             }
             R.id.action_add -> {

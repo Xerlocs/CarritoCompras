@@ -15,13 +15,12 @@
     <string name="C_ejemplo">Cantidad</string>
     <string name="P_ejemplo">Precio</string>
 
+    <string name="buscar">Buscar</string>
+
     //Texto Orden
     <string name="Por_Cantida">Cantidad de producto</string>
     <string name="A_Z" translatable="false">A - Z</string>
     <string name="Por_Tipo">Tipo de producto</string>
 
-    //a
-    <string name="hola" translatable="false">hola</string>
-    <string name="cambio" translatable="false">cambio</string>
 
 </resources>
