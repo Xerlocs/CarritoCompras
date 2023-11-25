@@ -14,6 +14,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.room.Room
+import cl.dv.carritocompras.adapter.ItemDetailDialog
 import cl.dv.carritocompras.adapter.UserNewDialog
 import cl.dv.carritocompras.database.QuoteDatabase
 import cl.dv.carritocompras.database.entities.QuoteEntity
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var listViewItems: ListView
     private lateinit var adapter: ArrayAdapter<String>
 
+    private var orden: Int = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -43,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             QuoteEntity(0, "Coca-Cola 3lt", "Bebestible", 1, 3000)
         )
 
-        val list: List<QuoteEntity> = db.getQuoteDao().getAllQuotes()
+        val list: List<QuoteEntity> = db.getQuoteDao().getOrderQuotes()
         listItems = list.toMutableList()
 
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems.map{it.nombre})
@@ -67,10 +69,36 @@ class MainActivity : AppCompatActivity() {
             R.id.action_order -> {
                 if(cambio.text == "A - Z"){
                     cambio.setText(R.string.Por_Cantida)
+                    orden = 3
+                    val list: List<QuoteEntity> = db.getQuoteDao().getOrder3Quotes()
+
+                    listItems = list.toMutableList()
+
+                    listViewItems.invalidate()
+                    adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems.map{it.nombre})
+                    listViewItems.adapter = adapter
+
                 }else if(cambio.text == "Cantidad de producto"){
                     cambio.setText(R.string.Por_Tipo)
+                    orden = 2
+                    val list: List<QuoteEntity> = db.getQuoteDao().getOrder2Quotes()
+
+                    listItems = list.toMutableList()
+
+                    listViewItems.invalidate()
+                    adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems.map{it.nombre})
+                    listViewItems.adapter = adapter
+
                 }else{
                     cambio.setText(R.string.A_Z)
+                    orden = 1
+                    val list: List<QuoteEntity> = db.getQuoteDao().getOrderQuotes()
+
+                    listItems = list.toMutableList()
+
+                    listViewItems.invalidate()
+                    adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems.map{it.nombre})
+                    listViewItems.adapter = adapter
                 }
                 return true
             }
@@ -91,15 +119,21 @@ class MainActivity : AppCompatActivity() {
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
+            R.id.action_show -> {
+                val info = item.menuInfo as AdapterView.AdapterContextMenuInfo
+                val position = info.position
+                showItemDetailDialog(listItems.get(position))
+                true
+            }
 
             R.id.action_edit -> {
                 // Handle the "Edit" option
-                //val intent = Intent(this, PatientEditActivity::class.java)
+                val intent = Intent(this, ItemEditActivity::class.java)
                 val info = item.menuInfo as AdapterView.AdapterContextMenuInfo
                 val position = info.position
-                //intent.putExtra("patient",patients.get(position))
+                //intent.putExtra("patient", listItems.get(position))
                 //intent.putExtra("position",position)
-                //startActivityForResult(intent, PatientListActivity.REQUEST_EDITER)
+                //startActivityForResult(intent, REQUEST_EDITER)
                 true
             }
             R.id.action_delete -> {
@@ -141,15 +175,47 @@ class MainActivity : AppCompatActivity() {
         db.getQuoteDao().delete(user)
     }
 
+    private fun showItemDetailDialog(item: QuoteEntity) {
+        val dialog = ItemDetailDialog(this, item)
+        dialog.show()
+    }
+
     fun refreshFromDatabase(){
-        val list: List<QuoteEntity> = db.getQuoteDao().getAllQuotes()
-        Toast.makeText(this,"Hi: "+list.size.toString(),Toast.LENGTH_LONG).show()
+        val list: List<QuoteEntity>
+        if(orden == 1){
+            list = db.getQuoteDao().getOrderQuotes()
+            Toast.makeText(this,"Hi: "+list.size.toString(),Toast.LENGTH_LONG).show()
 
-        listItems = list.toMutableList()
-        Toast.makeText(this,"Hi: "+listItems.size.toString(),Toast.LENGTH_LONG).show()
+            listItems = list.toMutableList()
+            Toast.makeText(this,"Hi: "+listItems.size.toString(),Toast.LENGTH_LONG).show()
 
-        listViewItems.invalidate()
-        adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems.map { it.nombre })
-        listViewItems.adapter = adapter
+            listViewItems.invalidate()
+            adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems.map{it.nombre})
+            listViewItems.adapter = adapter
+
+        }else if(orden == 2){
+            list = db.getQuoteDao().getOrder2Quotes()
+            Toast.makeText(this,"Hi: "+list.size.toString(),Toast.LENGTH_LONG).show()
+
+            listItems = list.toMutableList()
+            Toast.makeText(this,"Hi: "+listItems.size.toString(),Toast.LENGTH_LONG).show()
+
+            listViewItems.invalidate()
+            adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems.map{it.nombre})
+            listViewItems.adapter = adapter
+
+        }
+        else if(orden == 3){
+            list = db.getQuoteDao().getOrder3Quotes()
+            Toast.makeText(this,"Hi: "+list.size.toString(),Toast.LENGTH_LONG).show()
+
+            listItems = list.toMutableList()
+            Toast.makeText(this,"Hi: "+listItems.size.toString(),Toast.LENGTH_LONG).show()
+
+            listViewItems.invalidate()
+            adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems.map{it.nombre})
+            listViewItems.adapter = adapter
+        }
+
     }
 }

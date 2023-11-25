@@ -21,6 +21,8 @@
     <string name="buscar">Buscar</string>
     <string name="añadir">Agregar</string>
     <string name="cancelar">Cancelar</string>
+    <string name="guardar">Guardar</string>
+    <string name="regresar">Regresar</string>
 
     //Texto Orden
     <string name="Por_Cantida">Cantidad de producto</string>
@@ -28,6 +30,7 @@
     <string name="Por_Tipo">Tipo de producto</string>
 
     //Item list menu
+    <string name="mostrar">Mostrar</string>
     <string name="editar">Editar</string>
     <string name="borrar">Eliminar</string>
 

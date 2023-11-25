@@ -10,10 +10,13 @@
     <string name="P_ejemplo">Price</string>
     <string name="buscar">Search</string>
     <string name="añadir">Add</string>
+    <string name="regresar">Return</string>
     <string name="Por_Cantida">Quantity of product</string>
     <string name="Por_Tipo">Type of product</string>
     <string name="cancelar">Cancel</string>
+    <string name="mostrar">Show</string>
     <string name="editar">Edit</string>
     <string name="borrar">Delet</string>
     <string name="message_delete_item">Are you sure you want to delete this item?</string>
+    <string name="guardar">Save</string>
 </resources>

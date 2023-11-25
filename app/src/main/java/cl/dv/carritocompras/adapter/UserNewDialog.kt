@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Window
 import android.widget.Button
 import android.widget.EditText
+import androidx.fragment.app.DialogFragment
 import androidx.room.Room
 import cl.dv.carritocompras.MainActivity
 import cl.dv.carritocompras.R
@@ -36,9 +37,6 @@ class UserNewDialog(
         cantidad = findViewById(R.id.textInputCantidad)
         precio = findViewById(R.id.textInputPrecio)
 
-        var cantidadInt = cantidad.text.toString().toInt()
-        var precioInt = precio.text.toString().toInt()
-
         db = Room.databaseBuilder(
             context,
             QuoteDatabase::class.java, "database-name"
@@ -48,7 +46,7 @@ class UserNewDialog(
         buttonAddAndGoBack.setOnClickListener{
 
             db.getQuoteDao().insertAll(
-                QuoteEntity(id, nombre.text.toString(), tipo.text.toString(), cantidadInt, precioInt)
+                QuoteEntity(id, nombre.text.toString(), tipo.text.toString(), cantidad.text.toString().toInt(), precio.text.toString().toInt())
             )
             act.refreshFromDatabase()
             dismiss()

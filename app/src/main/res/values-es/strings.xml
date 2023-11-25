@@ -10,10 +10,13 @@
     <string name="P_ejemplo">Precio</string>
     <string name="buscar">Buscar</string>
     <string name="añadir">Agregar</string>
+    <string name="regresar">Regresar</string>
     <string name="Por_Cantida">Cantidad de producto</string>
     <string name="Por_Tipo">Tipo de producto</string>
     <string name="cancelar">Cancelar</string>
+    <string name="mostrar">Mostrar</string>
     <string name="editar">Editar</string>
     <string name="borrar">Borrar</string>
     <string name="message_delete_item">¿Estas seguro de borrar este item?</string>
+    <string name="guardar">Guardar</string>
 </resources>
