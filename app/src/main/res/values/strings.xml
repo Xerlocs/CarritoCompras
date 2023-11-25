@@ -28,6 +28,7 @@
     <string name="Por_Cantida">Cantidad de producto</string>
     <string name="A_Z" translatable="false">A - Z</string>
     <string name="Por_Tipo">Tipo de producto</string>
+    <string name="orden">Ordenado por:</string>
 
     //Item list menu
     <string name="mostrar">Mostrar</string>

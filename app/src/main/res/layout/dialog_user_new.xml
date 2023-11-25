@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/OtroCeleste"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/titulo"
-        android:textColor="@color/black"
+        android:textColor="@color/AzulOscuro"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -19,36 +19,33 @@
         android:id="@+id/textInputNombre"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="@string/N_ejemplo"
-        />
+        android:hint="@string/N_ejemplo" />
 
     <EditText
         android:id="@+id/textInputTipo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="@string/T_ejemplo"
-        />
+        android:hint="@string/T_ejemplo" />
 
     <EditText
         android:id="@+id/textInputCantidad"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="@string/C_ejemplo"
-        android:inputType="number"
-        />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/textInputPrecio"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="@string/P_ejemplo"
-        android:inputType="number"
-        />
+        android:inputType="number" />
 
     <Button
         android:id="@+id/buttonAddAndGoBack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/CoolBlue"
         android:text="@string/añadir" />
 
 </LinearLayout>

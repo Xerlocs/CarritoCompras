@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Rosita"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context="adapter.UserNewDialog">
@@ -11,31 +12,27 @@
         android:id="@+id/editTextNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/N_ejemplo"
-        />
+        android:hint="@string/N_ejemplo" />
 
     <EditText
         android:id="@+id/editTextTipo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/T_ejemplo"
-        />
+        android:hint="@string/T_ejemplo" />
 
     <EditText
         android:id="@+id/editTextCantidad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/C_ejemplo"
-        android:inputType="number"
-        />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/editTextPrecio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/P_ejemplo"
-        android:inputType="number"
-        />
+        android:inputType="number" />
 
     <!-- Add more UI elements for capturing symptoms if needed -->
 
@@ -43,7 +40,6 @@
         android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/guardar"
-        />
+        android:text="@string/guardar" />
 
 </LinearLayout>
