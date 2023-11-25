@@ -21,6 +21,9 @@ interface QuoteDao {
     @Query("SELECT * FROM item_table ORDER BY cantidad")
     fun getOrder3Quotes():List<QuoteEntity>
 
+    @Query("SELECT * FROM item_table WHERE nombre LIKE :searchQuery")
+    fun getSearchQuotes(searchQuery: String):List<QuoteEntity>
+
     @Insert
     fun insertAll(vararg quotes: QuoteEntity)
 
