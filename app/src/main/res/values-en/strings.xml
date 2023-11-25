@@ -3,10 +3,17 @@
     <string name="app_name">Shopping Car</string>
     <string name="titulo_order">Order by</string>
     <string name="titulo_add">Add product</string>
+    <string name="titulo">Product information</string>
     <string name="N_ejemplo">Name</string>
+    <string name="T_ejemplo">Vegetable - Fruit - Drinkable</string>
     <string name="C_ejemplo">Quantity</string>
     <string name="P_ejemplo">Price</string>
     <string name="buscar">Search</string>
+    <string name="añadir">Add</string>
     <string name="Por_Cantida">Quantity of product</string>
     <string name="Por_Tipo">Type of product</string>
+    <string name="cancelar">Cancel</string>
+    <string name="editar">Edit</string>
+    <string name="borrar">Delet</string>
+    <string name="message_delete_item">Are you sure you want to delete this item?</string>
 </resources>
