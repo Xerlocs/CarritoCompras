@@ -1,6 +1,5 @@
 package cl.dv.carritocompras.database
 
-import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import cl.dv.carritocompras.database.dao.QuoteDao
