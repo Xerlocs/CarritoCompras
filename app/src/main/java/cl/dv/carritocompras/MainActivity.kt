@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity() {
                     adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems.map{it.nombre})
                     listViewItems.adapter = adapter
 
-                }else if(cambio.text == "Cantidad de producto"){
+                }else if(cambio.text == "Cantidad de producto" || cambio.text == "Quantity of product" ){
                     cambio.setText(R.string.Por_Tipo)
                     orden = 2
                     val list: List<QuoteEntity> = db.getQuoteDao().getOrder2Quotes()

@@ -14,6 +14,7 @@
     <string name="Por_Cantida">Cantidad de producto</string>
     <string name="Por_Tipo">Tipo de producto</string>
     <string name="cancelar">Cancelar</string>
+    <string name="orden">Ordenar por:</string>
     <string name="mostrar">Mostrar</string>
     <string name="editar">Editar</string>
     <string name="borrar">Borrar</string>

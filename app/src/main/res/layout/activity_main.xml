@@ -51,6 +51,7 @@
         android:layout_marginTop="60dp"
         android:background="@color/white"
         android:hint="@string/buscar"
+        android:textColorHint="@color/AzulOscuro"
         app:layout_constraintEnd_toStartOf="@+id/SearchButton"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,6 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:cacheColorHint="@color/black"
             android:divider="@android:color/darker_gray"
             android:dividerHeight="1dp" />
     </LinearLayout>

@@ -18,18 +18,21 @@
         android:id="@+id/textViewTipo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/AzulOscuro"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textViewCantidad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/AzulOscuro"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textViewPrecio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/AzulOscuro"
         android:textSize="20sp" />
 
     <Button

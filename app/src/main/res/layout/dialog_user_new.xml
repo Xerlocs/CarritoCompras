@@ -19,27 +19,35 @@
         android:id="@+id/textInputNombre"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="@string/N_ejemplo" />
+        android:hint="@string/N_ejemplo"
+        android:textColor="@color/AzulOscuro"
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/textInputTipo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="@string/T_ejemplo" />
+        android:hint="@string/T_ejemplo"
+        android:textColor="@color/AzulOscuro"
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/textInputCantidad"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="@string/C_ejemplo"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="@color/AzulOscuro"
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/textInputPrecio"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="@string/P_ejemplo"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="@color/AzulOscuro"
+        android:textColorHint="@color/black" />
 
     <Button
         android:id="@+id/buttonAddAndGoBack"
